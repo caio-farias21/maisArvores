@@ -1,0 +1,15 @@
+[
+  { "nome": "PÁGINA INICIAL", "endpoint": "" },
+  { "nome": "ÍNGA DE METRO", "endpoint": "inga_de_metro" },
+  { "nome": "NEEM", "endpoint": "neem" },
+  { "nome": "JAMBO VERMELHO", "endpoint": "jambo_vermelho" },
+  { "nome": "JACARANDÁ BOCA DE SAPO", "endpoint": "jacaranda_boca_de_sapo" },
+  { "nome": "JAMBO AMARELO", "endpoint": "jambo_amarelo" },
+  { "nome": "PAU BRASIL", "endpoint": "pau_brasil" },
+  { "nome": "PATA DE VACA", "endpoint": "pata_de_vaca" },
+  { "nome": "ACÁCIA AMARELA", "endpoint": "acacia_amarela" },
+  { "nome": "GRAVIOLA BRANCA", "endpoint": "graviola_branca" },
+  { "nome": "CHORÃOZINHO", "endpoint": "choraozinho" },
+  { "nome": "ÍNGA DE DEDO", "endpoint": "inga_de_dedo" },
+  { "nome": "JACARANDÁ AMARELO", "endpoint": "jacaranda_amarelo" }
+]
