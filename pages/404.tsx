@@ -1,10 +1,6 @@
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
-
 export default function Error() {
   return (
     <>
-      <Navbar />
       <div className="not-found">
         <div>
           <h1 className="fw-bold text-center text-green col">
@@ -16,7 +12,6 @@ export default function Error() {
           </h4>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

@@ -1,15 +1,114 @@
 [
-  { "nome": "PÁGINA INICIAL", "endpoint": "" },
-  { "nome": "ÍNGA DE METRO", "endpoint": "inga_de_metro" },
-  { "nome": "NEEM", "endpoint": "neem" },
-  { "nome": "JAMBO VERMELHO", "endpoint": "jambo_vermelho" },
-  { "nome": "JACARANDÁ BOCA DE SAPO", "endpoint": "jacaranda_boca_de_sapo" },
-  { "nome": "JAMBO AMARELO", "endpoint": "jambo_amarelo" },
-  { "nome": "PAU BRASIL", "endpoint": "pau_brasil" },
-  { "nome": "PATA DE VACA", "endpoint": "pata_de_vaca" },
-  { "nome": "ACÁCIA AMARELA", "endpoint": "acacia_amarela" },
-  { "nome": "GRAVIOLA BRANCA", "endpoint": "graviola_branca" },
-  { "nome": "CHORÃOZINHO", "endpoint": "choraozinho" },
-  { "nome": "ÍNGA DE DEDO", "endpoint": "inga_de_dedo" },
-  { "nome": "JACARANDÁ AMARELO", "endpoint": "jacaranda_amarelo" }
+  {
+    "nome": "INGÁ DE METRO",
+    "endpoint": "inga_de_metro",
+    "imagem": "",
+    "descricao": "",
+    "nomeCientifico": "Inga edulis",
+    "familia": "Fabaceae",
+    "enderecos": ["Rua Verde, Qd M. Lt.10. St Industrial"]
+  },
+  {
+    "nome": "NEEM",
+    "endpoint": "neem",
+    "imagem": "",
+    "descricao": "Essa planta especial possui uma série de características notáveis. Ela é usada como planta medicinal, tratando diversas enfermidades. Além disso, sua folhagem densa oferece sombra e madeira valiosa. Também é um inseticida natural e controla plantas daninhas. Por fim, é um subproduto utilizado na produção de cosméticos.",
+    "nomeCientifico": "Azadirachta indica",
+    "familia": "Meliaceae",
+    "enderecos": [
+      "Rua da Cerâmica, Qd M. Lt 11. St Industria",
+      "Rua 05, Qd 04. Lt 17. St Aeroporto II - Complemento Jardim Gabriela"
+    ]
+  },
+
+  {
+    "nome": "PAU BRASIL",
+    "endpoint": "pau_brasil",
+    "imagem": "",
+    "descricao": "",
+    "nomeCientifico": "",
+    "familia": "",
+    "enderecos": []
+  },
+  {
+    "nome": "JAMBO VERMELHO",
+    "endpoint": "jambo_vermelho",
+    "imagem": "",
+    "descricao": "",
+    "nomeCientifico": "",
+    "familia": "",
+    "enderecos": []
+  },
+  {
+    "nome": "JACARANDÁ BOCA DE SAPO",
+    "endpoint": "jacaranda_boca_de_sapo",
+    "imagem": "",
+    "descricao": "",
+    "nomeCientifico": "",
+    "familia": "",
+    "enderecos": []
+  },
+  {
+    "nome": "JAMBO AMARELO",
+    "endpoint": "jambo_amarelo",
+    "imagem": "",
+    "descricao": "",
+    "nomeCientifico": "",
+    "familia": "",
+    "enderecos": []
+  },
+  {
+    "nome": "PATA DE VACA",
+    "endpoint": "pata_de_vaca",
+    "imagem": "",
+    "descricao": "",
+    "nomeCientifico": "",
+    "familia": "",
+    "enderecos": []
+  },
+  {
+    "nome": "ACÁCIA AMARELA",
+    "endpoint": "acacia_amarela",
+    "imagem": "",
+    "descricao": "",
+    "nomeCientifico": "",
+    "familia": "",
+    "enderecos": []
+  },
+  {
+    "nome": "GRAVIOLA BRANCA",
+    "endpoint": "graviola_branca",
+    "imagem": "",
+    "descricao": "",
+    "nomeCientifico": "",
+    "familia": "",
+    "enderecos": []
+  },
+  {
+    "nome": "CHORÃOZINHO",
+    "endpoint": "choraozinho",
+    "imagem": "",
+    "descricao": "",
+    "nomeCientifico": "",
+    "familia": "",
+    "enderecos": []
+  },
+  {
+    "nome": "INGÁ DE DEDO",
+    "endpoint": "inga_de_dedo",
+    "imagem": "",
+    "descricao": "",
+    "nomeCientifico": "",
+    "familia": "",
+    "enderecos": []
+  },
+  {
+    "nome": "JACARANDÁ AMARELO",
+    "endpoint": "jacaranda_amarelo",
+    "imagem": "",
+    "descricao": "",
+    "nomeCientifico": "",
+    "familia": "",
+    "enderecos": []
+  }
 ]

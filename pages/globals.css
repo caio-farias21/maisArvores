@@ -11,10 +11,23 @@
 }
 
 .not-found {
-  height: calc(100vh - 200px);
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.bg-main-green {
+  background-color: var(--main-green);
+}
+.bg-main-green:focus {
+  background-color: var(--main-green);
+}
+.bg-main-green:active {
+  background-color: var(--main-green-second);
+}
+.bg-main-green:hover {
+  background-color: var(--main-green-second);
 }
 
 .navbar-brand {
@@ -25,10 +38,26 @@
   color: var(--main-green);
 }
 
+nav {
+  transition: ease-in-out 0.2s;
+}
+
 nav .navbar-brand:hover {
   color: var(--main-green-second);
 }
 
 nav .navbar-brand:focus {
   color: var(--main-green);
+}
+
+.btn-primary {
+  --bs-btn-bg: var(--main-green);
+  --bs-btn-border-color: var(--main-green);
+  --bs-btn-hover-color: var(--bs-white);
+  --bs-btn-hover-bg: var(--main-green-second);
+  --bs-btn-hover-border-color: var(--main-green-second);
+  --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+  --bs-btn-active-color: var(--bs-btn-hover-color);
+  --bs-btn-active-bg: var(--main-green-second);
+  --bs-btn-active-border-color: var(--main-green-second);
 }
