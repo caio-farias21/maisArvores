@@ -33,7 +33,7 @@
   {
     "nome": "JAMBO VERMELHO",
     "endpoint": "jambo_vermelho",
-    "imagem": "",
+    "imagem": "https://raw.githubusercontent.com/caio-farias21/maisArvores/main/public/static/trees/jambo_vermelho.png",
     "descricao": "",
     "nomeCientifico": "",
     "familia": "",

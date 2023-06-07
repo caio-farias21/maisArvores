@@ -8,10 +8,22 @@ paginasValidas.forEach((pagina) => {
   arvores.push(pagina.nome);
 });
 
-export default function Navbar({ bgColor = "" }) {
+export default function Navbar() {
   if (typeof window !== "undefined") {
     const search = document.getElementById("search-box") as HTMLInputElement;
     const listGroupSearch = document.getElementById("list-group-search-trees");
+    window.addEventListener("scroll", () => {
+      const navbar = document.getElementById("navbar");
+      if (window.scrollY > 0) {
+        navbar.classList.add("bg-white");
+        navbar.classList.remove("bg-transparent");
+        navbar.classList.add("shadow");
+      } else {
+        navbar.classList.remove("bg-white");
+        navbar.classList.add("bg-transparent");
+        navbar.classList.remove("shadow");
+      }
+    });
     window.addEventListener("click", () =>
       listGroupSearch.classList.add("d-none")
     );
@@ -72,6 +84,14 @@ export default function Navbar({ bgColor = "" }) {
             aria-controls="navbarSupportedContent"
             aria-expanded="false"
             aria-label="Toggle navigation"
+            onClick={() => {
+              const navbar = document.getElementById("navbar");
+              if (window.scrollY == 0) {
+                navbar.classList.toggle("bg-white");
+                navbar.classList.toggle("bg-transparent");
+                navbar.classList.toggle("shadow");
+              }
+            }}
           >
             <span className="navbar-toggler-icon"></span>
           </button>
@@ -127,11 +147,7 @@ export default function Navbar({ bgColor = "" }) {
                 id="search-box"
               />
               <div
-                className="list-group"
-                style={{
-                  position: "absolute",
-                  top: "65px",
-                }}
+                className="list-group position-absolute mt-5"
                 id="list-group-search-trees"
               ></div>
             </form>
