@@ -1,114 +1,94 @@
+const paginasValidas = [
+  { nome: "PÁGINA INICIAL", endpoint: "" },
+  { nome: "ÍNGA DE METRO", endpoint: "inga_de_metro" },
+  { nome: "NEEM", endpoint: "neem" },
+  { nome: "JAMBO VERMELHO", endpoint: "jambo_vermelho" },
+  { nome: "JACARANDÁ BOCA DE SAPO", endpoint: "jacaranda_boca_de_sapo" },
+  { nome: "JAMBO AMARELO", endpoint: "jambo_amarelo" },
+  { nome: "PAU BRASIL", endpoint: "pau_brasil" },
+  { nome: "PATA DE VACA", endpoint: "pata_de_vaca" },
+  { nome: "ACÁCIA AMARELA", endpoint: "acacia_amarela" },
+  { nome: "GRAVIOLA BRANCA", endpoint: "graviola_branca" },
+  { nome: "CHORÃOZINHO", endpoint: "choraozinho" },
+  { nome: "ÍNGA DE DEDO", endpoint: "inga_de_dedo" },
+  { nome: "JACARANDÁ AMARELO", endpoint: "jacaranda_amarelo" },
+];
+const PAGINAS_A_MOSTRA = 3;
+
 export default function Navbar() {
   return (
-    <nav className="navbar navbar-expand-xxl navbar-light">
-      <div className="container-fluid">
-        <div id="logo">
-          <a>
-            <img src="" className="img-fluid" alt="logo" />
+    <>
+      <nav className="navbar navbar-expand-lg fw-bold">
+        <div className="container-fluid">
+          <img
+            src="https://raw.githubusercontent.com/caio-farias21/maisArvores/main/static/logo.svg"
+            className="p-2"
+            width={60}
+            alt="logo"
+          />
+          <a className="navbar-brand" href="#">
+            <span className="align-middle text-wrap text-green d-none d-sm-block">
+              Projeto Mais Árvores
+            </span>
+            <span className="align-middle text-wrap text-green d-block d-sm-none">
+              Mais Árvores
+            </span>
           </a>
-        </div>
-        <a className="navbar-brand font-bold">Projeto Mais Árvores</a>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div
-          className="navbar-collapse collapse justify-content-end text-center"
-          id="navbarNav"
-        >
-          <ul className="navbar-nav">
-            <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">
-                PÁGINA INICIAL
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="inga">
-                ÍNGA DE METRO
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="neem">
-                NEEM
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="jambo">
-                JAMBO VERMELHO
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="jacaranda_b">
-                JACARANDÁ BOCA DE SAPO
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="jambo_a">
-                JAMBO AMARELO
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="pau_brasil">
-                PAU BRASIL
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="pata">
-                PATA DE VACA
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="acacia">
-                ACÁCIA AMARELA
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="graviola">
-                GRAVIOLA BRANCA
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="choraozinho">
-                CHORÃOZINHO
-              </a>
-            </li>
-            <li className="nav-item dropstart">
-              <a
-                className="nav-link dropdown-toggle"
-                href="#"
-                id="navbarDarkDropdownMenuLink"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                MAIS
-              </a>
-              <ul
-                className="dropdown-menu dropdown-menu-dark"
-                aria-labelledby="navbarDarkDropdownMenuLink"
-              >
-                <li>
-                  <a className="dropdown-item" href="inga_d">
-                    Ingá de Dedo
+          <span className="m-2 d-lg-block d-none">|</span>
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+              {paginasValidas.slice(0, PAGINAS_A_MOSTRA).map((pagina) => (
+                <li className="nav-item mx-2">
+                  <a className="nav-link" href={`/${pagina.endpoint}`}>
+                    {pagina.nome[0].toUpperCase() +
+                      pagina.nome.slice(1).toLowerCase()}
                   </a>
                 </li>
-                <li>
-                  <a className="dropdown-item" href="jacaranda_a">
-                    Jacarandá Amarelo
-                  </a>
-                </li>
-              </ul>
-            </li>
-          </ul>
+              ))}
+              <li className="nav-item dropdown">
+                <a
+                  className="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Mais
+                </a>
+                <ul className="dropdown-menu">
+                  {paginasValidas.slice(PAGINAS_A_MOSTRA).map((pagina) => (
+                    <li>
+                      <a className="dropdown-item" href={`/${pagina.endpoint}`}>
+                        {pagina.nome[0].toUpperCase() +
+                          pagina.nome.slice(1).toLowerCase()}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </li>
+            </ul>
+            <form className="d-flex" role="search">
+              <input
+                className="form-control me-2"
+                type="search"
+                placeholder="Procurar por espécie"
+                aria-label="Search"
+              />
+            </form>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </>
   );
 }
