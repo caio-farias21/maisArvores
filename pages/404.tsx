@@ -1,3 +1,4 @@
+import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 
 export default function Error() {
@@ -15,6 +16,7 @@ export default function Error() {
           </h4>
         </div>
       </div>
+      <Footer />
     </>
   );
 }

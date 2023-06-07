@@ -1,3 +1,4 @@
+import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 
 const navColor = "rgb(78, 162, 232)";
@@ -15,6 +16,7 @@ export default function Home() {
         className="img-fluid w-100"
         alt="hero"
       />
+      <Footer />
     </>
   );
 }
