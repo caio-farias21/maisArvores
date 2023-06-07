@@ -10,7 +10,7 @@ paginasValidas.forEach((pagina) => {
 
 export default function Navbar({ bgColor = "" }) {
   if (typeof window !== "undefined") {
-    const search: HTMLInputElement = document.getElementById("search-box");
+    const search = document.getElementById("search-box") as HTMLInputElement
     const listGroupSearch = document.getElementById("list-group-search-trees");
     window.addEventListener("click", () =>
       listGroupSearch.classList.add("d-none")
