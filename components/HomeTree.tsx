@@ -37,17 +37,37 @@ export default function HomeTree({
             />
           </div>
           <div className="col">
-            <h1 className="fw-bold">{Capitalize(treeObject.nome)}</h1>
-            <div>
-              <h3 className="fw-bold">Nome Científico</h3>
-              <span>{treeObject.nomeCientifico}</span>
+            <h1 className="fw-bold text-white mb-5 text-center">
+              {Capitalize(treeObject.nome)}
+            </h1>
+            <div className="row g-5">
+              <div className="col-8">
+                <div className="mb-3">
+                  <h3 className="fw-bold text-white">Nome Científico</h3>
+                  <span className="text-main-green fw-bold fs-4">
+                    {treeObject.nomeCientifico}
+                  </span>
+                </div>
+                <div className="mb-3">
+                  <h3 className="fw-bold text-white">Família</h3>
+                  <span className="text-main-green fw-bold fs-4">
+                    {treeObject.familia}
+                  </span>
+                </div>
+              </div>
+              <div className="col-4">
+                <button
+                  className="btn btn-primary ratio ratio-1x1"
+                  id="btn-green"
+                >
+                  <span className="fs-1 fw-bold">...</span>
+                </button>
+              </div>
             </div>
-            <div>
-              <h3 className="fw-bold">Família</h3>
-              <span>{treeObject.familia}</span>
-            </div>
-            <div>
-              <p>{treeObject.descricao}</p>
+            <hr className="pb-5" />
+            <div className="mt-5 pt-5">
+              <h3 className="fw-bold text-main-green">Descrição</h3>
+              <p className="fw-medium">{treeObject.descricao}</p>
             </div>
           </div>
         </div>

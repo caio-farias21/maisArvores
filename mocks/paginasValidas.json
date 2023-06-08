@@ -2,8 +2,8 @@
   {
     "nome": "INGÁ DE METRO",
     "endpoint": "inga_de_metro",
-    "imagem": "",
-    "descricao": "",
+    "imagem": "https://raw.githubusercontent.com/caio-farias21/maisArvores/main/public/static/trees/inga_de_metro.png",
+    "descricao": "Os ramos formam uma copa larga, plana e moderadamente densa. A ingá-cipó pode ser perene em regiões tropicais ou decídua quando plantada em regiões mais frias. A árvore tem um tronco de cor cinza claro. As hastes e os galhos mais novos podem ter galhos esparsos ou densos.",
     "nomeCientifico": "Inga edulis",
     "familia": "Fabaceae",
     "enderecos": ["Rua Verde, Qd M. Lt.10. St Industrial"]
@@ -11,8 +11,8 @@
   {
     "nome": "NEEM",
     "endpoint": "neem",
-    "imagem": "",
-    "descricao": "",
+    "imagem": "https://raw.githubusercontent.com/caio-farias21/maisArvores/main/public/static/trees/neem.png",
+    "descricao": "Árvore de grande porte, podendo atingir até 30m de altura e 2,5m de diâmetro. Nativa de todo o subcontinente indiano, é resistente a seca.",
     "nomeCientifico": "Azadirachta indica",
     "familia": "Meliaceae",
     "enderecos": [
@@ -24,8 +24,8 @@
   {
     "nome": "PAU BRASIL",
     "endpoint": "pau_brasil",
-    "imagem": "",
-    "descricao": "",
+    "imagem": "https://raw.githubusercontent.com/caio-farias21/maisArvores/main/public/static/trees/pau_brasil.png",
+    "descricao": "A árvore alcança entre dez e quinze metros de altura e possui tronco reto, com casca cor cinza-escuro, coberta de acúleos, especialmente nos ramos mais jovens.",
     "nomeCientifico": "",
     "familia": "",
     "enderecos": []
@@ -42,8 +42,8 @@
   {
     "nome": "JACARANDÁ BOCA DE SAPO",
     "endpoint": "jacaranda_boca_de_sapo",
-    "imagem": "",
-    "descricao": "",
+    "imagem": "https://raw.githubusercontent.com/caio-farias21/maisArvores/main/public/static/trees/jacaranda_boca_de_sapo.png",
+    "descricao": "Jacaranda brasiliana é uma espécie de planta com flor pertencente à família Bignoniaceae. É nativa do Brasil, inclusive da região do Cerrado.",
     "nomeCientifico": "",
     "familia": "",
     "enderecos": []
@@ -51,8 +51,8 @@
   {
     "nome": "JAMBO AMARELO",
     "endpoint": "jambo_amarelo",
-    "imagem": "",
-    "descricao": "",
+    "imagem": "https://raw.githubusercontent.com/caio-farias21/maisArvores/main/public/static/trees/jambo_amarelo.png",
+    "descricao": "São frutos piriformes (em forma de pera), com casca lisa e cerosa, rosada, esbranquiçada, amarela ou laranja-amarelada,[4] polpa consistente na cor branca, e uma ou mais sementes de formato esférico. É bem conhecido como jambo-amarelo",
     "nomeCientifico": "",
     "familia": "",
     "enderecos": []
@@ -60,8 +60,8 @@
   {
     "nome": "PATA DE VACA",
     "endpoint": "pata_de_vaca",
-    "imagem": "",
-    "descricao": "",
+    "imagem": "https://raw.githubusercontent.com/caio-farias21/maisArvores/main/public/static/trees/pata_de_vaca.png",
+    "descricao": "Bauhinia forficata, comumente conhecida como orquídea brasileira, pata-de-vaca é uma espécie de árvore florida da família das ervilhas, Fabaceae, nativa da Argentina, Brasil, Uruguai e Peru.",
     "nomeCientifico": "",
     "familia": "",
     "enderecos": []
@@ -69,7 +69,7 @@
   {
     "nome": "ACÁCIA AMARELA",
     "endpoint": "acacia_amarela",
-    "imagem": "",
+    "imagem": "https://raw.githubusercontent.com/caio-farias21/maisArvores/main/public/static/trees/acacia_amarela.png",
     "descricao": "",
     "nomeCientifico": "",
     "familia": "",
@@ -78,7 +78,7 @@
   {
     "nome": "GRAVIOLA BRANCA",
     "endpoint": "graviola_branca",
-    "imagem": "",
+    "imagem": "https://raw.githubusercontent.com/caio-farias21/maisArvores/main/public/static/trees/graviola_branca.png",
     "descricao": "",
     "nomeCientifico": "",
     "familia": "",
@@ -87,7 +87,7 @@
   {
     "nome": "CHORÃOZINHO",
     "endpoint": "choraozinho",
-    "imagem": "",
+    "imagem": "https://raw.githubusercontent.com/caio-farias21/maisArvores/main/public/static/trees/choraozinho.png",
     "descricao": "",
     "nomeCientifico": "",
     "familia": "",
@@ -96,7 +96,7 @@
   {
     "nome": "INGÁ DE DEDO",
     "endpoint": "inga_de_dedo",
-    "imagem": "",
+    "imagem": "https://raw.githubusercontent.com/caio-farias21/maisArvores/main/public/static/trees/inga_de_dedo.png",
     "descricao": "",
     "nomeCientifico": "",
     "familia": "",
@@ -105,7 +105,7 @@
   {
     "nome": "JACARANDÁ AMARELO",
     "endpoint": "jacaranda_amarelo",
-    "imagem": "",
+    "imagem": "https://raw.githubusercontent.com/caio-farias21/maisArvores/main/public/static/trees/jacaranda_amarelo.png",
     "descricao": "",
     "nomeCientifico": "",
     "familia": "",

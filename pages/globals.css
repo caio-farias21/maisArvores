@@ -10,11 +10,22 @@
   letter-spacing: -0.075em;
 }
 
+img {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
 .not-found {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.bg-white-nav {
+  background-color: rgba(255, 255, 255, 0.9);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }
 
 .bg-main-green {
@@ -50,14 +61,12 @@ nav .navbar-brand:focus {
   color: var(--main-green);
 }
 
-.btn-primary {
-  --bs-btn-bg: var(--main-green);
-  --bs-btn-border-color: var(--main-green);
-  --bs-btn-hover-color: var(--bs-white);
-  --bs-btn-hover-bg: var(--main-green-second);
-  --bs-btn-hover-border-color: var(--main-green-second);
-  --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
-  --bs-btn-active-color: var(--bs-btn-hover-color);
-  --bs-btn-active-bg: var(--main-green-second);
-  --bs-btn-active-border-color: var(--main-green-second);
+#btn-green {
+  background-color: var(--main-green);
+  border: var(--bs-border-width) solid var(--main-green);
+}
+
+#btn-green:hover {
+  background-color: var(--main-green-second);
+  border: var(--bs-border-width) solid var(--main-green);
 }

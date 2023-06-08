@@ -16,11 +16,11 @@ export default function Navbar() {
     window.addEventListener("scroll", () => {
       const navbar = document.getElementById("navbar");
       if (window.scrollY > 0) {
-        navbar.classList.add("bg-white");
+        navbar.classList.add("bg-white-nav");
         navbar.classList.remove("bg-transparent");
         navbar.classList.add("shadow");
       } else {
-        navbar.classList.remove("bg-white");
+        navbar.classList.remove("bg-white-nav");
         navbar.classList.add("bg-transparent");
         navbar.classList.remove("shadow");
       }
@@ -88,7 +88,7 @@ export default function Navbar() {
             onClick={() => {
               const navbar = document.getElementById("navbar");
               if (window.scrollY == 0) {
-                navbar.classList.toggle("bg-white");
+                navbar.classList.toggle("bg-white-nav");
                 navbar.classList.toggle("bg-transparent");
                 navbar.classList.toggle("shadow");
               }
@@ -151,7 +151,8 @@ export default function Navbar() {
               ></div>
             </form>
             <button
-              className="btn btn-primary text-white me-3 d-none d-lg-block"
+              className="btn text-white me-3 d-none d-lg-block"
+              id="btn-green"
               onClick={() =>
                 document.getElementById("search").classList.toggle("d-none")
               }

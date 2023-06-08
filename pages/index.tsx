@@ -27,8 +27,8 @@ export default function Home() {
         alt="hero"
       />
       <div className="container py-5 mb-5">
-        <h1 className="fw-bold">Sobre</h1>
-        <p className="text-wrap">
+        <h1 className="fw-bold text-green">Sobre</h1>
+        <p className="text-wrap fw-bold">
           Este site tem como objetivo, monitorar e informar a população sobre o
           progresso do processo de arborização da cidade de Campos Belos -
           Goiás.
