@@ -3,53 +3,58 @@ import { Capitalize } from "../utils/StringMethods";
 import { ReplaceSpecialCaracters } from "../utils/ReplaceSpecialCaracters";
 
 const PAGINAS_A_MOSTRA = 3;
-let arvores = [];
 
-paginasValidas.forEach((pagina) => {
-  arvores.push(pagina.nome);
-});
+function searchTree() {
+  const search = document.getElementById("search-box") as HTMLInputElement;
+  const listGroupSearch = document.getElementById("list-group-search-trees");
+
+  search.addEventListener("keyup", () => {
+    listGroupSearch.classList.remove("d-none");
+    const searchString = search.value
+      ? ReplaceSpecialCaracters(search.value.toLowerCase().trim())
+      : null;
+
+    const arvoresFiltradas = paginasValidas.filter((pagina) => {
+      const nomeArvore = ReplaceSpecialCaracters(
+        pagina.nome.toLowerCase().trim()
+      );
+      return nomeArvore.includes(searchString);
+    });
+
+    listGroupSearch.innerHTML = "";
+    arvoresFiltradas.forEach((arvore) => {
+      const li = document.createElement("a");
+      li.classList.add("list-group-item", "list-group-item-action");
+      li.href = "/tree/" + arvore.endpoint;
+      li.innerHTML = Capitalize(arvore.nome);
+      listGroupSearch.appendChild(li);
+    });
+  });
+
+  window.addEventListener("click", () =>
+    listGroupSearch.classList.add("d-none")
+  );
+}
+
+function scrollSpy() {
+  window.addEventListener("scroll", () => {
+    const navbar = document.getElementById("navbar");
+    if (window.scrollY > 0) {
+      navbar.classList.add("bg-white-nav");
+      navbar.classList.remove("bg-transparent");
+      navbar.classList.add("shadow");
+    } else {
+      navbar.classList.remove("bg-white-nav");
+      navbar.classList.add("bg-transparent");
+      navbar.classList.remove("shadow");
+    }
+  });
+}
 
 export default function Navbar() {
   if (typeof window !== "undefined") {
-    const search = document.getElementById("search-box") as HTMLInputElement;
-    const listGroupSearch = document.getElementById("list-group-search-trees");
-    window.addEventListener("scroll", () => {
-      const navbar = document.getElementById("navbar");
-      if (window.scrollY > 0) {
-        navbar.classList.add("bg-white-nav");
-        navbar.classList.remove("bg-transparent");
-        navbar.classList.add("shadow");
-      } else {
-        navbar.classList.remove("bg-white-nav");
-        navbar.classList.add("bg-transparent");
-        navbar.classList.remove("shadow");
-      }
-    });
-    window.addEventListener("click", () =>
-      listGroupSearch.classList.add("d-none")
-    );
-    search.addEventListener("keyup", () => {
-      listGroupSearch.classList.remove("d-none");
-      const searchString = search.value
-        ? ReplaceSpecialCaracters(search.value.toLowerCase().trim())
-        : null;
-
-      const arvoresFiltradas = arvores.filter((arvore) => {
-        return ReplaceSpecialCaracters(arvore)
-          .toLowerCase()
-          .includes(searchString);
-      });
-      listGroupSearch.innerHTML = "";
-      arvoresFiltradas.forEach((arvore) => {
-        const li = document.createElement("a");
-        li.classList.add("list-group-item", "list-group-item-action");
-        li.href =
-          "/" +
-          paginasValidas.find((pagina) => pagina.nome === arvore).endpoint;
-        li.innerHTML = Capitalize(arvore);
-        listGroupSearch.appendChild(li);
-      });
-    });
+    searchTree();
+    scrollSpy();
   }
   return (
     <>
@@ -105,7 +110,7 @@ export default function Navbar() {
               </li>
               {paginasValidas.slice(0, PAGINAS_A_MOSTRA).map((pagina, idx) => (
                 <li className="nav-item mx-2" key={idx}>
-                  <a className="nav-link" href={`/${pagina.endpoint}`}>
+                  <a className="nav-link" href={`/tree/${pagina.endpoint}`}>
                     {Capitalize(pagina.nome)}
                   </a>
                 </li>
@@ -123,7 +128,10 @@ export default function Navbar() {
                 <ul className="dropdown-menu">
                   {paginasValidas.slice(PAGINAS_A_MOSTRA).map((pagina, idx) => (
                     <li key={idx}>
-                      <a className="dropdown-item" href={`/${pagina.endpoint}`}>
+                      <a
+                        className="dropdown-item"
+                        href={`/tree/${pagina.endpoint}`}
+                      >
                         {Capitalize(pagina.nome)}
                       </a>
                     </li>

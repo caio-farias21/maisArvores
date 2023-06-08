@@ -6,7 +6,8 @@
     "descricao": "Os ramos formam uma copa larga, plana e moderadamente densa. A ingá-cipó pode ser perene em regiões tropicais ou decídua quando plantada em regiões mais frias. A árvore tem um tronco de cor cinza claro. As hastes e os galhos mais novos podem ter galhos esparsos ou densos.",
     "nomeCientifico": "Inga edulis",
     "familia": "Fabaceae",
-    "enderecos": ["Rua Verde, Qd M. Lt.10. St Industrial"]
+    "enderecos": ["Rua Verde, Qd M. Lt.10. St Industrial"],
+    "backgroundColor": "#617A55"
   },
   {
     "nome": "NEEM",
@@ -18,7 +19,8 @@
     "enderecos": [
       "Rua da Cerâmica, Qd M. Lt 11. St Industria",
       "Rua 05, Qd 04. Lt 17. St Aeroporto II - Complemento Jardim Gabriela"
-    ]
+    ],
+    "backgroundColor": "#F97B22"
   },
 
   {
@@ -26,89 +28,120 @@
     "endpoint": "pau_brasil",
     "imagem": "https://raw.githubusercontent.com/caio-farias21/maisArvores/main/public/static/trees/pau_brasil.png",
     "descricao": "A árvore alcança entre dez e quinze metros de altura e possui tronco reto, com casca cor cinza-escuro, coberta de acúleos, especialmente nos ramos mais jovens.",
-    "nomeCientifico": "",
-    "familia": "",
-    "enderecos": []
+    "nomeCientifico": "Paubrasilia echinata",
+    "familia": "Fabaceae",
+    "enderecos": [
+      "Rua 05, Qd 04. Lt 12. St Aeroporto II - Complemneto Jardim Gabriela",
+      "Rua 05, Qd 04. Lt 15. St Aeroporto II - Complemneto Jardim Gabriela"
+    ],
+    "backgroundColor": "#617A55"
   },
   {
     "nome": "JAMBO VERMELHO",
     "endpoint": "jambo_vermelho",
     "imagem": "https://raw.githubusercontent.com/caio-farias21/maisArvores/main/public/static/trees/jambo_vermelho.png",
     "descricao": "As folhas são grandes, compridas e brilhantes. As flores são vermelhas e com numerosos estames.",
-    "nomeCientifico": "",
-    "familia": "",
-    "enderecos": []
+    "nomeCientifico": "Syzygium malaccense",
+    "familia": "Myrtaceae",
+    "enderecos": [
+      "Rua Coronel J. L. Miranda, Qd 23. Lt 9. St Aeroporto",
+      "Rua Antônio S.Veloso, Qd 8. Lt 14. St Cruzeiro"
+    ],
+    "backgroundColor": "#E74646"
   },
   {
     "nome": "JACARANDÁ BOCA DE SAPO",
     "endpoint": "jacaranda_boca_de_sapo",
     "imagem": "https://raw.githubusercontent.com/caio-farias21/maisArvores/main/public/static/trees/jacaranda_boca_de_sapo.png",
     "descricao": "Jacaranda brasiliana é uma espécie de planta com flor pertencente à família Bignoniaceae. É nativa do Brasil, inclusive da região do Cerrado.",
-    "nomeCientifico": "",
-    "familia": "",
-    "enderecos": []
+    "nomeCientifico": "Jacaranda brasiliana",
+    "familia": "Bignoniaceae",
+    "enderecos": [
+      "Rua 05, Qd 04. Lt 03. St Aeroporto II - Complemneto Jardim Gabriela",
+      "Rua 05, Qd 04. Lt 12. St Aeroporto II - Complemneto Jardim Gabriela",
+      "Rua C-2, Qd 02. Lt 16. St Cruzeiro",
+      "Rua 12, Qd 22. Lt 02. St Buritis"
+    ],
+    "backgroundColor": "#917FB3"
   },
   {
     "nome": "JAMBO AMARELO",
     "endpoint": "jambo_amarelo",
     "imagem": "https://raw.githubusercontent.com/caio-farias21/maisArvores/main/public/static/trees/jambo_amarelo.png",
     "descricao": "São frutos piriformes (em forma de pera), com casca lisa e cerosa, rosada, esbranquiçada, amarela ou laranja-amarelada,[4] polpa consistente na cor branca, e uma ou mais sementes de formato esférico. É bem conhecido como jambo-amarelo",
-    "nomeCientifico": "",
-    "familia": "",
-    "enderecos": []
+    "nomeCientifico": "Syzygium jambos",
+    "familia": "Myrtaceae",
+    "enderecos": ["Casa do João"],
+    "backgroundColor": "#F7D060"
   },
   {
     "nome": "PATA DE VACA",
     "endpoint": "pata_de_vaca",
     "imagem": "https://raw.githubusercontent.com/caio-farias21/maisArvores/main/public/static/trees/pata_de_vaca.png",
     "descricao": "Bauhinia forficata, comumente conhecida como orquídea brasileira, pata-de-vaca é uma espécie de árvore florida da família das ervilhas, Fabaceae, nativa da Argentina, Brasil, Uruguai e Peru.",
-    "nomeCientifico": "",
-    "familia": "",
-    "enderecos": []
+    "nomeCientifico": "Bauhinia forficata",
+    "familia": "Fabaceae",
+    "enderecos": [
+      "Rua 05, Qd 04. Lt 17. St Aeroporto II - Complemneto Jardim Gabriela",
+      "Rua Carmina Potes Brito C-3, Qd 02. Lt 05. St Cruzeiro",
+      "Rua Carmina Potes Brito C-3, Qd 02. Lt 06. St Cruzeiro",
+      "Rua Carmina Potes Brito C-3, Qd 02. Lt 07. St Cruzeiro"
+    ],
+    "backgroundColor": "#3F979B"
   },
   {
     "nome": "ACÁCIA AMARELA",
     "endpoint": "acacia_amarela",
     "imagem": "https://raw.githubusercontent.com/caio-farias21/maisArvores/main/public/static/trees/acacia_amarela.png",
-    "descricao": "",
-    "nomeCientifico": "",
-    "familia": "",
-    "enderecos": []
+    "descricao": "Os membros do género Acacia são árvores ou arbustos, em geral com abundante ramificação e sistema radicular profundo e extenso.",
+    "nomeCientifico": "Vachellia farnesiana",
+    "familia": "Fabaceae",
+    "enderecos": [
+      "Rua Carmina Potes Brito C-3, Qd 02. Lt 06. St Cruzeiro",
+      "Rua Militão Bento França, Qd 12, Lt. St Buritis"
+    ],
+    "backgroundColor": "#F7D060"
   },
   {
     "nome": "GRAVIOLA BRANCA",
     "endpoint": "graviola_branca",
     "imagem": "https://raw.githubusercontent.com/caio-farias21/maisArvores/main/public/static/trees/graviola_branca.png",
-    "descricao": "",
-    "nomeCientifico": "",
-    "familia": "",
-    "enderecos": []
+    "descricao": "A fruta costuma ser chamada de graviola devido ao seu sabor levemente ácido quando madura. Annona muricata é nativa do Caribe e da América Central, mas agora é amplamente cultivada – e em algumas áreas, tornando-se invasiva – em climas tropicais e subtropicais em todo o mundo, como a Índia.",
+    "nomeCientifico": "Annona muricata",
+    "familia": "Annonaceae",
+    "enderecos": ["Rua Carmina Potes Brito C-3, Qd 02. Lt 07. St Cruzeiro"],
+    "backgroundColor": "#617A55"
   },
   {
     "nome": "CHORÃOZINHO",
     "endpoint": "choraozinho",
     "imagem": "https://raw.githubusercontent.com/caio-farias21/maisArvores/main/public/static/trees/choraozinho.png",
-    "descricao": "",
-    "nomeCientifico": "",
-    "familia": "",
-    "enderecos": []
+    "descricao": "É uma árvore de médio a grande porte que pode alcançar até 20 a 25 metros de altura. É de crescimento rápido mas tem uma curta longevidade. É caducifólia, perde as folhas no inverno ainda que, por vezes, durem na árvore até irromperem as novas. É muito pouco exigente com os solos, que apenas têm de ter água suficiente.",
+    "nomeCientifico": "Amaranthus caudatus",
+    "familia": "Amaranthaceae",
+    "enderecos": ["Rua Carmina Potes Brito C-3, Qd 02. Lt 1-B. St Cruzeiro"],
+    "backgroundColor": "#4F709C"
   },
   {
     "nome": "INGÁ DE DEDO",
     "endpoint": "inga_de_dedo",
     "imagem": "https://raw.githubusercontent.com/caio-farias21/maisArvores/main/public/static/trees/inga_de_dedo.png",
-    "descricao": "",
-    "nomeCientifico": "",
-    "familia": "",
-    "enderecos": []
+    "descricao": "São conhecidas cerca de 300 espécies do gênero Inga. O atual centro de diversidade do gênero é a floresta amazônica, mas o gênero possui representantes no México, Antilhas e em toda a América do Sul, sendo um gênero exclusivamente neotropical. Em geral, os ingás preferem nascer às margens dos rios, devido à grande quantidade de sementes levadas e depositadas nas várzeas pelas enchentes.",
+    "nomeCientifico": "Inga marginata",
+    "familia": "Fabaceae",
+    "enderecos": [
+      "Rua 05, Qd 04. Lt 04. St Aeroporto II - Complemento Jardim Gabriela"
+    ],
+    "backgroundColor": "#617A55"
   },
   {
     "nome": "JACARANDÁ AMARELO",
     "endpoint": "jacaranda_amarelo",
     "imagem": "https://raw.githubusercontent.com/caio-farias21/maisArvores/main/public/static/trees/jacaranda_amarelo.png",
-    "descricao": "",
-    "nomeCientifico": "",
-    "familia": "",
-    "enderecos": []
+    "descricao": "Sua superfície é irregularmente lustrosa, com tronco pardo dotado de reflexos, listras ou sombras escuras. É muito utilizada na fabricação de mobília de luxo, objetos decorativos, tacos e assoalhos.",
+    "nomeCientifico": "Machaerium villosum",
+    "familia": "Fabaceae",
+    "enderecos": ["Rua Militão Bento França, Qd 12, Lt. St Buritis"],
+    "backgroundColor": "#F7D060"
   }
 ]

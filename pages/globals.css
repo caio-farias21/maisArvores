@@ -70,3 +70,13 @@ nav .navbar-brand:focus {
   background-color: var(--main-green-second);
   border: var(--bs-border-width) solid var(--main-green);
 }
+
+.tree-name {
+  font-size: 5em;
+}
+
+@media (max-width: 992px) {
+  .tree-name {
+    font-size: 3em;
+  }
+}
