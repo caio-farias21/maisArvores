@@ -12,7 +12,7 @@
     "nome": "NEEM",
     "endpoint": "neem",
     "imagem": "",
-    "descricao": "Essa planta especial possui uma série de características notáveis. Ela é usada como planta medicinal, tratando diversas enfermidades. Além disso, sua folhagem densa oferece sombra e madeira valiosa. Também é um inseticida natural e controla plantas daninhas. Por fim, é um subproduto utilizado na produção de cosméticos.",
+    "descricao": "",
     "nomeCientifico": "Azadirachta indica",
     "familia": "Meliaceae",
     "enderecos": [
@@ -34,7 +34,7 @@
     "nome": "JAMBO VERMELHO",
     "endpoint": "jambo_vermelho",
     "imagem": "https://raw.githubusercontent.com/caio-farias21/maisArvores/main/public/static/trees/jambo_vermelho.png",
-    "descricao": "",
+    "descricao": "As folhas são grandes, compridas e brilhantes. As flores são vermelhas e com numerosos estames.",
     "nomeCientifico": "",
     "familia": "",
     "enderecos": []

@@ -1,4 +1,5 @@
 import paginasValidas from "../mocks/paginasValidas.json";
+import { Capitalize } from "../utils/StringMethods";
 import { ReplaceSpecialCaracters } from "../utils/ReplaceSpecialCaracters";
 
 const PAGINAS_A_MOSTRA = 3;
@@ -45,7 +46,7 @@ export default function Navbar() {
         li.href =
           "/" +
           paginasValidas.find((pagina) => pagina.nome === arvore).endpoint;
-        li.innerHTML = arvore[0].toUpperCase() + arvore.slice(1).toLowerCase();
+        li.innerHTML = Capitalize(arvore);
         listGroupSearch.appendChild(li);
       });
     });
@@ -105,8 +106,7 @@ export default function Navbar() {
               {paginasValidas.slice(0, PAGINAS_A_MOSTRA).map((pagina, idx) => (
                 <li className="nav-item mx-2" key={idx}>
                   <a className="nav-link" href={`/${pagina.endpoint}`}>
-                    {pagina.nome[0].toUpperCase() +
-                      pagina.nome.slice(1).toLowerCase()}
+                    {Capitalize(pagina.nome)}
                   </a>
                 </li>
               ))}
@@ -124,8 +124,7 @@ export default function Navbar() {
                   {paginasValidas.slice(PAGINAS_A_MOSTRA).map((pagina, idx) => (
                     <li key={idx}>
                       <a className="dropdown-item" href={`/${pagina.endpoint}`}>
-                        {pagina.nome[0].toUpperCase() +
-                          pagina.nome.slice(1).toLowerCase()}
+                        {Capitalize(pagina.nome)}
                       </a>
                     </li>
                   ))}
