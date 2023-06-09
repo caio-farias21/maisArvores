@@ -1,22 +1,4 @@
-const navColor = "rgb(78, 162, 232)";
-const primaryColor = "";
-const secondaryColor = "";
-
 export default function Home() {
-  if (typeof window !== "undefined") {
-    const navbar = document.getElementById("navbar");
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 0) {
-        navbar.classList.add("bg-white");
-        navbar.classList.remove("bg-transparent");
-        navbar.classList.add("shadow");
-      } else {
-        navbar.classList.remove("bg-white");
-        navbar.classList.add("bg-transparent");
-        navbar.classList.remove("shadow");
-      }
-    });
-  }
   return (
     <>
       <img

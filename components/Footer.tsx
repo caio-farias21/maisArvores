@@ -1,13 +1,5 @@
 import logoApoio from "../mocks/logoApoio.json";
 
-export function Imagem({ object }) {
-  return (
-    <>
-      <img src={object.src} alt={object.alt} className="img-fluid p-2" />
-    </>
-  );
-}
-
 export default function Footer() {
   return (
     <footer className="border-top py-3 bg-white">
@@ -22,7 +14,11 @@ export default function Footer() {
               className=" col-lg-2 col-md-3 col-sm-5 col-10 d-flex align-items-center m-auto"
               key={idx}
             >
-              <Imagem object={object} />
+              <img
+                src={object.src}
+                alt={object.alt}
+                className="img-fluid p-2"
+              />
             </div>
           ))}
         </div>

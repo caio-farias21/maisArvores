@@ -2,9 +2,10 @@ import HomeTree from "../../components/HomeTree";
 import paginasValidas from "../../mocks/paginasValidas.json";
 import { useRouter } from "next/router";
 import Error from "../404";
-import { MainBackground } from "../../components/MainBackground";
+import { BackgroundTemplate } from "../../components/BackgroundTemplate";
+import { Tree } from "../../types/Tree";
 
-export async function getStaticProps({ params }) {
+export async function getStaticProps({ params }: any) {
   const object = await paginasValidas.find(
     (pagina) => pagina.endpoint === params.endpoint
   );
@@ -24,11 +25,17 @@ export async function getStaticPaths() {
   };
 }
 
-export default function Tree({ object, notFound }) {
+export default function TreeHomepage({
+  object,
+  notFound,
+}: {
+  object: Tree;
+  notFound: boolean;
+}) {
   const router = useRouter();
 
   if (router.isFallback) {
-    return <MainBackground color={"#F6F6F6"} />;
+    return <BackgroundTemplate color={"#F6F6F6"} />;
   }
 
   if (notFound) {

@@ -1,44 +1,99 @@
 import paginasValidas from "../mocks/paginasValidas.json";
-import { Capitalize } from "../utils/StringMethods";
-import { ReplaceSpecialCaracters } from "../utils/ReplaceSpecialCaracters";
+import { Capitalize, ReplaceSpecialCaracters } from "../utils/StringMethods";
 
 const PAGINAS_A_MOSTRA = 3;
+const NUMERO_MAX_DE_ARVORES_POR_PESQUISA = 5;
 
 function searchTree() {
   const search = document.getElementById("search-box") as HTMLInputElement;
-  const listGroupSearch = document.getElementById("list-group-search-trees");
+  const listGroupSearch = document.getElementById(
+    "list-group-search-trees"
+  ) as HTMLDivElement;
 
   search.addEventListener("keyup", () => {
-    listGroupSearch.classList.remove("d-none");
-    const searchString = search.value
-      ? ReplaceSpecialCaracters(search.value.toLowerCase().trim())
-      : null;
+    listGroupSearch.classList.add("show");
+    const searchString = ReplaceSpecialCaracters(
+      search.value.toLowerCase().trim()
+    );
 
-    const arvoresFiltradas = paginasValidas.filter((pagina) => {
-      const nomeArvore = ReplaceSpecialCaracters(
-        pagina.nome.toLowerCase().trim()
+    type finalResult = {
+      nome: string;
+      nomeCientifico?: string;
+      familia?: string;
+      endpoint?: string;
+    };
+    const arvoresFiltradas = [] as Array<finalResult>;
+    paginasValidas.forEach((pagina) => {
+      const finalResult = {} as finalResult;
+      const nome = ReplaceSpecialCaracters(pagina.nome.toLowerCase().trim());
+      const familia = ReplaceSpecialCaracters(
+        pagina.familia.toLowerCase().trim()
       );
-      return nomeArvore.includes(searchString);
+      const nomeCientifico = ReplaceSpecialCaracters(
+        pagina.nomeCientifico.toLowerCase().trim()
+      );
+      if (searchString) {
+        if (nome.includes(searchString)) {
+          finalResult["nome"] = nome;
+          finalResult["endpoint"] = pagina.endpoint;
+        }
+        if (nomeCientifico.includes(searchString)) {
+          finalResult["nomeCientifico"] = nomeCientifico;
+          finalResult["endpoint"] = pagina.endpoint;
+          if (!finalResult["nome"]) finalResult["nome"] = nome;
+        }
+        if (familia.includes(searchString)) {
+          finalResult["familia"] = familia;
+          finalResult["endpoint"] = pagina.endpoint;
+          if (!finalResult["nome"]) finalResult["nome"] = nome;
+        }
+        if (Object.keys(finalResult).length > 0)
+          arvoresFiltradas.push(finalResult);
+      }
     });
 
     listGroupSearch.innerHTML = "";
-    arvoresFiltradas.forEach((arvore) => {
-      const li = document.createElement("a");
-      li.classList.add("list-group-item", "list-group-item-action");
-      li.href = "/tree/" + arvore.endpoint;
-      li.innerHTML = Capitalize(arvore.nome);
-      listGroupSearch.appendChild(li);
-    });
+    if (arvoresFiltradas.length > 0)
+      arvoresFiltradas
+        .slice(0, NUMERO_MAX_DE_ARVORES_POR_PESQUISA)
+        .forEach((arvore, idx) => {
+          const li = document.createElement("a");
+          const familia = arvore.familia ? "Família: " + arvore.familia : "";
+          const nomeCientifico = arvore.nomeCientifico
+            ? "Nome Científico: " + arvore.nomeCientifico
+            : "";
+          li.classList.add("dropdown-item");
+          li.href = "/tree/" + arvore.endpoint;
+          li.innerHTML = `
+          <p class="fw-medium m-0">${Capitalize(arvore.nome)}</p>
+          <small class="text-secondary d-block">${nomeCientifico}</small>
+          <small class="text-secondary d-block">${familia}</small>
+          `;
+          listGroupSearch.appendChild(li);
+          if (
+            idx < arvoresFiltradas.length - 1 &&
+            idx < NUMERO_MAX_DE_ARVORES_POR_PESQUISA - 1
+          ) {
+            const li = document.createElement("hr");
+            li.classList.add("dropdown-divider");
+            listGroupSearch.appendChild(li);
+          }
+        });
+    else if (searchString == "") {
+      listGroupSearch.classList.remove("show");
+    } else {
+      listGroupSearch.innerHTML = `<li><a class="dropdown-item disabled">Não encontrado...</a></li>`;
+    }
   });
 
   window.addEventListener("click", () =>
-    listGroupSearch.classList.add("d-none")
+    listGroupSearch.classList.remove("show")
   );
 }
 
 function scrollSpy() {
   window.addEventListener("scroll", () => {
-    const navbar = document.getElementById("navbar");
+    const navbar = document.getElementById("navbar") as HTMLDivElement;
     if (window.scrollY > 0) {
       navbar.classList.add("bg-white-nav");
       navbar.classList.remove("bg-transparent");
@@ -91,18 +146,20 @@ export default function Navbar() {
             aria-expanded="false"
             aria-label="Toggle navigation"
             onClick={() => {
-              const navbar = document.getElementById("navbar");
+              const navbar = document.getElementById(
+                "navbar"
+              ) as HTMLDivElement;
               if (window.scrollY == 0) {
                 navbar.classList.toggle("bg-white-nav");
-                navbar.classList.toggle("bg-transparent");
                 navbar.classList.toggle("shadow");
+                navbar.classList.toggle("bg-transparent");
               }
             }}
           >
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0" id="main-navbar">
               <li className="nav-item mx-2">
                 <a className="nav-link" href="/">
                   {"Página inicial"}
@@ -144,28 +201,48 @@ export default function Navbar() {
                 </a>
               </li>
             </ul>
-            <form className="d-flex d-none" role="search" id="search">
+            <div
+              className="d-none dropdown me-lg-2 mb-lg-0 mb-3"
+              role="search"
+              id="search"
+            >
               <input
-                className="form-control me-2"
+                className="form-control"
                 type="search"
                 placeholder="Procurar por espécie"
                 autoComplete="off"
                 aria-label="Search"
                 id="search-box"
+                aria-expanded="false"
+                autoCorrect="off"
               />
-              <div
-                className="list-group position-absolute mt-5"
+              <ul
+                className="dropdown-menu w-100"
                 id="list-group-search-trees"
-              ></div>
-            </form>
+              ></ul>
+            </div>
             <button
-              className="btn text-white me-3 d-none d-lg-block"
+              className="btn text-white mb-3 mb-lg-0 me-lg-3"
               id="btn-green"
-              onClick={() =>
-                document.getElementById("search").classList.toggle("d-none")
-              }
+              onClick={() => {
+                const search = document.getElementById(
+                  "search"
+                ) as HTMLFormElement;
+                search.classList.toggle("d-none");
+                if (window.innerWidth < 728) {
+                  document
+                    .getElementById("main-navbar")
+                    ?.classList.toggle("d-none");
+                }
+                document
+                  .getElementById("search-icon")
+                  ?.classList.toggle("bi-search");
+                document
+                  .getElementById("search-icon")
+                  ?.classList.toggle("bi-x-lg");
+              }}
             >
-              <i className="bi bi-search me-2"></i>
+              <i className="bi bi-search me-2" id="search-icon"></i>
               <span>Procurar</span>
             </button>
           </div>

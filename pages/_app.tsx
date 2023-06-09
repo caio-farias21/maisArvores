@@ -5,9 +5,9 @@ import React, { useEffect } from "react";
 import Layout from "../components/Layout";
 import Head from "next/head";
 
-export default function MyApp({ Component, pageProps }) {
+export default function MyApp({ Component, pageProps }: any) {
   useEffect(() => {
-    import("bootstrap/dist/js/bootstrap");
+    import("bootstrap/dist/js/bootstrap" as any);
   }, []);
   return (
     <>

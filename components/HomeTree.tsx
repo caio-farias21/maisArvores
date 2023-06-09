@@ -1,25 +1,11 @@
 import { Capitalize } from "../utils/StringMethods";
-import { MainBackground } from "./MainBackground";
+import { BackgroundTemplate } from "./BackgroundTemplate";
+import { Tree } from "../types/Tree";
 
-interface TreeObject {
-  nome: string;
-  endpoint: string;
-  imagem: string;
-  descricao: string;
-  nomeCientifico: string;
-  familia: string;
-  enderecos: string[];
-  backgroundColor: string;
-}
-
-interface HomeTreeProps {
-  treeObject: TreeObject;
-}
-
-export default function HomeTree({ treeObject }: HomeTreeProps) {
+export default function HomeTree({ treeObject }: { treeObject: Tree }) {
   return (
     <>
-      <MainBackground color={treeObject.backgroundColor} />
+      <BackgroundTemplate color={treeObject.backgroundColor} />
       <div className="container my-5 py-5 position-absolute start-50 top-0 translate-middle-x">
         <div className="row-cols-md-2 row-cols-1 row">
           <div className="w-50 col m-auto mb-3 mb-md-0">
