@@ -5,21 +5,30 @@ import { Tree } from "../types/Tree";
 export default function HomeTree({ treeObject }: { treeObject: Tree }) {
   return (
     <>
-      <BackgroundTemplate color={treeObject.backgroundColor} />
-      <div className="container my-5 py-5 position-absolute start-50 top-0 translate-middle-x">
-        <div className="row-cols-md-2 row-cols-1 row">
+      <div
+        className="container-fluid pt-5"
+        style={{
+          background: `url(${BackgroundTemplate({
+            color: treeObject.backgroundColor,
+          })})`,
+          zIndex: -1,
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+        }}
+      >
+        <div className="container py-5 row-cols-md-2 row-cols-1 row m-auto">
           <div className="w-50 col m-auto mb-3 mb-md-0">
             <img
               className="img-fluid rounded-5 shadow"
               src={treeObject.imagem}
-              alt={Capitalize(treeObject.nome)}
+              alt={treeObject.nome}
             />
           </div>
           <div className="col m-auto">
             <h1 className="fw-bold mb-5 text-center rounded text-white p-2 tree-name">
               {Capitalize(treeObject.nome)}
             </h1>
-            <div className="row g-0">
+            <div className="row">
               <div className="col-8">
                 <div className="mb-3">
                   <h3 className="fw-bold text-white m-0">Nome Científico</h3>
@@ -36,7 +45,7 @@ export default function HomeTree({ treeObject }: { treeObject: Tree }) {
               </div>
               <div className="col-3-md col-4 mx-0 my-auto">
                 <button
-                  className="btn btn-primary ratio ratio-1x1 d-flex"
+                  className="btn text-white ratio ratio-1x1"
                   type="button"
                   id="btn-green"
                   data-bs-toggle="modal"
@@ -53,11 +62,11 @@ export default function HomeTree({ treeObject }: { treeObject: Tree }) {
                 </button>
               </div>
             </div>
-            <hr className="pb-5 d-none d-md-block" />
+            <hr className="d-none d-md-block" />
           </div>
         </div>
       </div>
-      <div className="container my-5 py-5">
+      <div className="container py-5">
         <div>
           <h3 className="fw-bold text-green text-center text-md-start">
             Descrição
@@ -71,13 +80,13 @@ export default function HomeTree({ treeObject }: { treeObject: Tree }) {
         className="modal fade"
         id="enderecos"
         tabIndex={-1}
-        aria-labelledby="exampleModalLabel"
+        aria-labelledby="enderecosLabel"
         aria-hidden="true"
       >
         <div className="modal-dialog">
           <div className="modal-content">
             <div className="modal-header">
-              <h1 className="modal-title fs-5" id="exampleModalLabel">
+              <h1 className="modal-title fs-5" id="enderecosLabel">
                 <span className="fw-bold text-green">Endereços de </span>
                 <span className="fw-medium">{Capitalize(treeObject.nome)}</span>
               </h1>

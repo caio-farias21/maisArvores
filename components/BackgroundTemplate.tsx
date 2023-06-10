@@ -7,18 +7,5 @@ export function BackgroundTemplate({ color = "#D6D6D6" }: { color?: string }) {
     svgString
   )}`;
 
-  return (
-    <img
-      className="img-fluid"
-      style={{
-        zIndex: -1,
-        minHeight: "90vh",
-        maxWidth: "100vw",
-        objectFit: "cover",
-        objectPosition: "center",
-      }}
-      src={svgData}
-      alt="Main Background"
-    />
-  );
+  return svgData;
 }

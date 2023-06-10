@@ -35,7 +35,19 @@ export default function TreeHomepage({
   const router = useRouter();
 
   if (router.isFallback) {
-    return <BackgroundTemplate color={"#F6F6F6"} />;
+    return (
+      <img
+        className="img-fluid"
+        src={BackgroundTemplate({ color: "#F6F6F6" })}
+        style={{
+          zIndex: -1,
+          minHeight: "600px",
+          objectFit: "cover",
+          objectPosition: "center",
+        }}
+        alt="loading..."
+      ></img>
+    );
   }
 
   if (notFound) {

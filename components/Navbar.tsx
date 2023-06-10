@@ -114,7 +114,7 @@ export default function Navbar() {
   return (
     <>
       <nav
-        className={"navbar navbar-expand-lg fw-bold bg-transparent fixed-top"}
+        className="navbar navbar-expand-lg fw-bold bg-transparent fixed-top"
         id="navbar"
       >
         <div className="container-fluid">
@@ -196,8 +196,8 @@ export default function Navbar() {
                 </ul>
               </li>
               <li className="nav-item mx-2">
-                <a className="nav-link" href={"/todas"}>
-                  {"Ver todas"}
+                <a className="nav-link" href="/todas">
+                  Ver todas
                 </a>
               </li>
             </ul>
