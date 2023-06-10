@@ -6,7 +6,7 @@ export default function TodasAsArvores() {
     <>
       <div className="container py-5 my-5">
         <h1 className="fw-bold mb-3">Todas as árvores</h1>
-        <div className="row d-flex justify-content-around gx-3">
+        <div className="row d-flex justify-content-around gx-1">
           {paginasValidas.map((pagina, idx) => (
             <div
               className="card mb-3 p-0"
@@ -26,7 +26,7 @@ export default function TodasAsArvores() {
                     <h5 className="card-title">{Capitalize(pagina.nome)}</h5>
                     <div className="card-text">
                       <p className="text-wrap">
-                        {Limiter(80, pagina.descricao)}
+                        {Limiter(60, pagina.descricao)}
                       </p>
                       <small>Font: Wikipedia</small>
                     </div>

@@ -28,19 +28,6 @@ img {
   backdrop-filter: blur(10px);
 }
 
-.bg-main-green {
-  background-color: var(--main-green);
-}
-.bg-main-green:focus {
-  background-color: var(--main-green);
-}
-.bg-main-green:active {
-  background-color: var(--main-green-second);
-}
-.bg-main-green:hover {
-  background-color: var(--main-green-second);
-}
-
 .navbar-brand {
   transition: ease-in-out 0.2s;
 }

@@ -59,8 +59,12 @@ export default function HomeTree({ treeObject }: { treeObject: Tree }) {
       </div>
       <div className="container my-5 py-5">
         <div>
-          <h3 className="fw-bold text-main-green">Descrição</h3>
-          <p className="fw-medium">{treeObject.descricao}</p>
+          <h3 className="fw-bold text-green text-center text-md-start">
+            Descrição
+          </h3>
+          <p className="fw-medium text-center text-md-start">
+            {treeObject.descricao}
+          </p>
         </div>
       </div>
       <div
