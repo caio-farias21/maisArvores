@@ -24,7 +24,7 @@ export default function HomeTree({ treeObject }: { treeObject: Tree }) {
               alt={treeObject.nome}
             />
           </div>
-          <div className="col m-auto">
+          <div className="col m-auto pb-5 pb-md-0">
             <h1 className="fw-bold mb-5 text-center rounded text-white p-2 tree-name">
               {Capitalize(treeObject.nome)}
             </h1>
